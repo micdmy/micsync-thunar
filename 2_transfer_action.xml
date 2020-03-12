@@ -1,0 +1,9 @@
+<action>
+	<icon></icon>
+	<name>micsync-transfer</name>
+	<unique-id>UUID</unique-id>
+	<command>PATHS="$(echo "%F" | sed "s|'|\\'|g")"; exo-open --launch TerminalEmulator --command="bash\ -c\ \"micsync\ --transfer\ -vs\ \\\"$PATHS\\\";\ read\ -p\ \\\"Press\ enter\ to\ exit\\\"\""</command>
+	<description>transfer-desc</description>
+	<directories/>
+	<patterns>*</patterns>
+</action>

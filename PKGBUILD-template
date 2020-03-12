@@ -1,0 +1,22 @@
+!/bin/bash
+#Script build.sh replaces VERSION_PLACEHOLDER with current version while creating PKGBUILD.
+pkgname=micsync-thunar
+pkgver=VERSION_PLACEHOLDER
+pkgrel=1
+pkgdesc=""
+arch=('any')
+url=""
+license=('GPL3')
+depends=('thunar>=1.8' 'micsync')
+#makedepends=('')
+source=('.tar.gz')
+
+build() {
+	cd ${pkgname}-${pkgver}/
+}
+
+package() {
+	cd ${pkgname}-${pkgver}/
+	python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
+}
+

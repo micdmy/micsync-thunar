@@ -1,0 +1,9 @@
+<action>
+	<icon></icon>
+	<name>micsync-tree</name>
+	<unique-id>UUID</unique-id>
+	<command>PATHS="$(echo "%F" | sed "s|'|\\'|g")"; exo-open --launch TerminalEmulator --command="bash\ -c\ \"micsync\ --tree\ -vs\ \\\"$PATHS\\\";\ read\ -p\ \\\"Press\ enter\ to\ exit\\\"\""</command>
+	<description>tree-desc</description>
+	<directories/>
+	<patterns>*</patterns>
+</action>

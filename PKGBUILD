@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #Script build.sh replaces VERSION_PLACEHOLDER with current version while creating PKGBUILD.
 pkgname=micsync-thunar
 pkgver=0.0.1
@@ -16,3 +16,4 @@ package() {
 	install -D -t "$pkgdir/usr/bin" "$srcdir/source/micdmy-thunar-remove-actions"
 }
 
+md5sums=('68518c29d2e80b34e9f6b2fb0f35d1fe')

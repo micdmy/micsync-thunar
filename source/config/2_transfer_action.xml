@@ -6,4 +6,9 @@
 	<description>transfer-desc</description>
 	<directories/>
 	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>

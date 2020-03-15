@@ -12,8 +12,10 @@ depends=('thunar>=1.8' 'micsync')
 source=('git+https://github.com/micdmy/micsync-thunar/')
 
 package() {
-	install -D -t "$pkgdir/usr/bin" "$srcdir/$pkgname/source/micsync-thunar-install-actions"
-	install -D -t "$pkgdir/usr/bin" "$srcdir/$pkgname/source/micsync-thunar-remove-actions"
+	install -D -t "${pkgdir}/usr/bin" "${srcdir}/${pkgname}/source/micsync-thunar-install-actions"
+	install -D -t "${pkgdir}/usr/bin" "${srcdir}/${pkgname}/source/micsync-thunar-remove-actions"
+	mkdir -p "${pkgdir}/etc/${pkgname}"
+	cp ${srcdir}/${pkgname}/source/config/* ${pkgdir}/etc/${pkgname}
 }
 
 md5sums=('SKIP')

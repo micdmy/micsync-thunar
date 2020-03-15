@@ -1,12 +1,14 @@
 #!/bin/bash
 
 UCA_XML="$HOME/.config/Thunar/uca.xml"
+CONFIG_DIR="/etc/micsync-thunar"
+
 # create uca.xml if it doesn't exist:
 mkdir -p ~/.config/Thunar
-cp -n uca-template.xml $UCA_XML
+cp -n ${CONFIG_DIR}/uca-template.xml $UCA_XML
 
 TEMP_FILE=micsync_thunar_temp.txt
-for ACTION_FILE in *_action.xml; do
+for ACTION_FILE in ${CONFIG_DIR}/*_action.xml; do
 	#generate unique id for action:
 	UUID="$(uuidgen)"
 	#replace "UUID" with generated id and save action to temporary file:
